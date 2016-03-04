@@ -1,0 +1,11 @@
+chef_server_url         "<%= @chef_url %>"
+client_key              "/etc/chef/client.pem"
+log_level               :info
+log_location            "/var/log/chef.log"
+
+<% if @foreman_hook -%>
+require 'chef_handler_foreman'
+foreman_server_options  :url => "<%= node[:chef_client][:foreman_upload_url] %>"
+foreman_facts_upload    "<%= node[:chef_client][:foreman_facts_upload] %>"
+foreman_reports_upload  "<%= node[:chef_client][:foreman_reports_upload] %>"
+<% end -%>
