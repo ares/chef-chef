@@ -2,7 +2,7 @@ chef_server_url         "<%= @chef_url %>"
 client_key              "/etc/chef/client.pem"
 log_level               :info
 log_location            "/var/log/chef.log"
-nodename                "<%= @hostname %>"
+node_name               "<%= @hostname %>"
 
 <% if @foreman_hook -%>
 require 'chef_handler_foreman'
