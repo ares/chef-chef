@@ -7,7 +7,7 @@ template "/etc/chef/client.rb" do
   source 'client.rb.erb'
   owner node[:user] || 'root'
   group node[:user] || 'root'
-  variables :chef_url => node[:chef_client][:chef_url], :foreman_hook => node[:chef_client][:foreman_hook]
+  variables :chef_url => node[:chef_client][:chef_url], :foreman_hook => node[:chef_client][:foreman_hook], :hostname => node[:hostname]
 end
 
 cron "chef_client" do
