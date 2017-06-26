@@ -4,7 +4,7 @@ maintainer_email 'ar3s.cz@gmail.com'
 license          'All rights reserved'
 description      'Configures chef client'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.5'
+version          '0.1.7'
 
 attribute 'chef_client',
           :display_name => 'Chef client options',
